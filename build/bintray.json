@@ -2,7 +2,7 @@
     "package": {
         "name": "travis-ci",
         "repo": "golang-url-shortener",
-        "subject": "mxschmitt"
+        "subject": "jasonwiguna"
     },
     "version": {
         "name": "0.1"
