@@ -11,8 +11,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/gobuffalo/packr/v2"
-	"github.com/jasonwiguna/golang-url-shortener/internal/stores"
-	"github.com/jasonwiguna/golang-url-shortener/internal/util"
+	"github.com/mxschmitt/golang-url-shortener/internal/stores"
+	"github.com/mxschmitt/golang-url-shortener/internal/util"
 	"github.com/pkg/errors"
 )
 

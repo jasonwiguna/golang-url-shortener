@@ -20,8 +20,8 @@ main
 *.db
 *.lock
 /config.*
-/internal/handlers/static.go
-/internal/handlers/tmpls/tmpls.go
+/internall/handlers/static.go
+/internall/handlers/tmpls/tmpls.go
 /releases
 /docker_releases
 data
