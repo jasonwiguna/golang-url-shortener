@@ -28,11 +28,6 @@ export default class LookupComponent extends Component {
             ]]
         }))
     }
-    healthCheck(link) {
-        fetch(link)
-            .then(toastr.info("OK"))
-            .catch(e => util._reportError(e, "from "+link))
-    }
     render() {
         const { links } = this.state
         return (
@@ -49,7 +44,6 @@ export default class LookupComponent extends Component {
                     {links.map((link, i) => <CustomCard key={i} header={new URL(link[0]).hostname} metaHeader={link[1]} description={link[0]} expireDate={link[5]} customExtraContent={<div className='ui two buttons'>
                         <Button icon='clock' content='Show recent visitors' />
                         <Button icon='line chart' content='Delete Entry' />
-                        <Button icon='clock' content='Health Check' onClick={this.healthCheck(link[1])} />
                     </div>} />)}
                 </Card.Group>
             </div>

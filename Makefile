@@ -1,4 +1,5 @@
-all: buildNodeFrontend getCMDDependencies embedFrontend getGoDependencies buildProject
+
+all: buildNodeFrontend getCMDDependencies embedFrontend getGoDependencies runUnitTests buildProject
 
 runUnitTests:
 	go test -v ./...
@@ -9,16 +10,17 @@ buildNodeFrontend:
 	cd web && rm build/static/**/*.map
 
 embedFrontend:
-	cd cmd/golang-url-shortener
+	cd cmd/golang-url-shortener && packr2
 
 getCMDDependencies:
 	go get -v github.com/mattn/goveralls
 	go get -v github.com/gobuffalo/packr/v2/packr2
 	go get -v github.com/mitchellh/gox
-	go get golang.org/x/sys/unix
 
 getGoDependencies:
 	go get -v ./...
+	# Workaround for: https://github.com/sirupsen/logrus/issues/824
+	GOOS=windows go get -v ./...
 
 buildProject:
 	rm -rf releases

@@ -6,11 +6,11 @@ golang_url_shortener:
     - ./data:/data
   environment:
     - GUS_BASE_URL=http://localhost:8081
-    - GUS_GOOGLE_CLIENT_ID=262903010108-ffmgq4716imoo8t25f23vg7juv5rqnbn.apps.googleusercontent.com
-    - GUS_GOOGLE_CLIENT_SECRET=wZ4n70vvRw980ndsKHBXupfR
+    - GUS_GOOGLE_CLIENT_ID=
+    - GUS_GOOGLE_CLIENT_SECRET=
     - GUS_BACKEND=redis
-    - GUS_REDIS_HOST=ec2-3-221-185-60.compute-1.amazonaws.com:26499
-    - GUS_REDIS_PASSWORD=p3bad619675880fa3c49b4b85ef2a0e7551e68d9c341fcd9d0a0d244f31d547eb
+    - GUS_REDIS_HOST=
+    - GUS_REDIS_PASSWORD=
     - GUS_GITHUB_CLIENT_ID=
     - GUS_GITHUB_CLIENT_SECRET=
     - GUS_MICROSOFT_CLIENT_ID=
